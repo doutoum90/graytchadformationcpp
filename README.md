@@ -5,3 +5,5 @@
 ## [Leçon 1: Introduction](docs/lecon1.md)
 
 ## [Leçon 2: Lalekou en C++](docs/lecon2.md)
+
+## [Leçon 3: Les variables simples et les opérations](docs/lecon3.md)
