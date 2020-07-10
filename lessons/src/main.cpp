@@ -4,8 +4,9 @@
 #include "fonctions.hpp"
 
 int main()
-{
-    /********* Lesson 2 ********/
+{   /********* Lesson 2 ********/
+    std::cout << "Lalekou Iyal GrayTchad fi formation C++\n" << std::endl;
+   /********* Lesson 3 ********/
    /*  constexpr double PI{3.14};
     bool monbooleen(true);
     int nombre1{5};
