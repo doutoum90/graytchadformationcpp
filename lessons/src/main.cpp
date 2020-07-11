@@ -2,12 +2,13 @@
 #include <cstdlib>
 #include <memory>
 #include "fonctions.hpp"
+#include "personne.hpp"
 
 int main()
-{   /********* Lesson 2 ********/
-    std::cout << "Lalekou Iyal GrayTchad fi formation C++\n" << std::endl;
-   /********* Lesson 3 ********/
-   /*  constexpr double PI{3.14};
+{ /********* Lesson 2 ********/
+    // std::cout << "Lalekou Iyal GrayTchad fi formation C++\n" << std::endl;
+    /********* Lesson 3 ********/
+    /*  constexpr double PI{3.14};
     bool monbooleen(true);
     int nombre1{5};
     char caractere = 'Z';
@@ -33,13 +34,13 @@ int main()
 
     // int *nom_pointeur=NULL; notation C
 
-    int nombre3 = 8;
+    /* int nombre3 = 8;
     int *nom_pointeur{nullptr};
     nom_pointeur = &nombre3;
     std::cout << *nom_pointeur << std::endl;
 
-    //  int *nom_pointeur2 = malloc(sizeof(int));
-    // *nom_pointeur2= 5;
+    int *nom_pointeur2 = malloc(sizeof(int));
+    *nom_pointeur2= 5;
 
     int *nom_pointeur2{new int(5)};
 
@@ -55,7 +56,18 @@ int main()
     std::shared_ptr<int> pt_intelligent2{std::make_shared<int>(54)};
     nom_pointeur = nom_pointeur3.release();
 
-    std::cout << *nom_pointeur << std::endl;
+    std::cout << *nom_pointeur << std::endl; */
 
+    /********* Lesson 6 ********/
+
+    Personne personne1{};
+    personne1.marcher();
+    std::cout << personne1.nom << std::endl
+              << personne1.age << std::endl;
+    Personne personne2{1, "GRAYTCHAD"};
+    personne2.marcher();
+
+    std::cout << personne2.nom << std::endl
+              << personne2.age << std::endl;
     return EXIT_SUCCESS;
 }

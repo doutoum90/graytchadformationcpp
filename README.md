@@ -11,3 +11,5 @@
 ## [Leçon 4: Les fonctions, procedures et la programmation modulaire](docs/lecon4.md)
 
 ## [Leçon 5: Les pointeurs et allocation dynamique](docs/lecon5.md)
+
+## [Leçon 6: Premiere classe en C++](docs/lecon6.md)
