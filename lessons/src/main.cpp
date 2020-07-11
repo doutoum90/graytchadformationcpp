@@ -4,6 +4,76 @@
 #include "fonctions.hpp"
 #include "personne.hpp"
 
+using namespace std;
+
+class Livre
+{
+private:
+    int nombrePage;
+    string titre;
+    inline void afficherAttribut(string text, string attr)
+    {
+        cout << text << attr << endl;
+    }
+
+    /* data */
+public:
+    inline Livre()
+    {
+        nombrePage = 100;
+        titre = "Le rêve d'une femme hardie";
+        cout << "Création d'un livre" << endl;
+    }
+    inline ~Livre()
+    {
+    }
+
+    inline void feuillet()
+    {
+        cout << "feuillet" << endl;
+    }
+    inline int getNombrePage() const
+    {
+        return nombrePage;
+    }
+
+    inline string getTitre() const
+    {
+        return titre;
+    }
+
+    inline void setNombrePage(const int nombrePage)
+    {
+        this->nombrePage = nombrePage;
+    }
+
+    inline void afficher()
+    {
+        afficherAttribut("Titre du livre : ", titre);
+        cout << "Nombre de page du livre : " << nombrePage << endl;
+    }
+
+    double somme(double a, double b)
+    {
+        return a + b;
+    }
+
+    int somme(int a, int b)
+    {
+        return a + b;
+    }
+    int somme(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+
+    int calcul(int a, int b)
+    {
+        return [](int d, int e) { return d + e; }(a, b);
+       
+    }
+};
+
 int main()
 { /********* Lesson 2 ********/
     // std::cout << "Lalekou Iyal GrayTchad fi formation C++\n" << std::endl;
@@ -60,7 +130,7 @@ int main()
 
     /********* Lesson 6 ********/
 
-    Personne personne1{};
+    /*     Personne personne1{};
     personne1.marcher();
     std::cout << personne1.nom << std::endl
               << personne1.age << std::endl;
@@ -68,6 +138,18 @@ int main()
     personne2.marcher();
 
     std::cout << personne2.nom << std::endl
-              << personne2.age << std::endl;
+              << personne2.age << std::endl; */
+
+    /********* Lesson 7 ********/
+
+    Livre l1{};
+    l1.afficher();
+    l1.feuillet();
+    l1.setNombrePage(300);
+
+    l1.afficher();
+
+    cout << l1.calcul(54, 46) << endl;
+
     return EXIT_SUCCESS;
 }
