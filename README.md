@@ -19,3 +19,5 @@
 ## [Leçon 8: Les fonctions lambda et les namespaces](docs/lecon8.md)
 
 ## [Leçon 9: Manipulation des fichiers ](docs/lecon9.md)
+
+## [Leçon 10: La classe string ](docs/lecon10.md)

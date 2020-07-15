@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <memory>
+#include <fstream>
+#include <string>
 #include "fonctions.hpp"
 #include "personne.hpp"
 
@@ -167,13 +169,13 @@ int main()
 
     cout << l1.calcul(54, 46) << endl;*/
 
-    /*** Lesson8****/
+    /********* Lesson 8 ********/
     /*[zone de capture]
     (paramètres de la lambda) 
     -> 
     type de retour { instructions }
     */
-    auto somme = [](auto const &nb1, auto const &nb2) { return nb1 + nb2; };
+    /*    auto somme = [](auto const &nb1, auto const &nb2) { return nb1 + nb2; };
     cout << somme(4, 5);
     int a = 5, b = 8;
     cout << "a=" << a << "b=" << b << endl;
@@ -188,7 +190,43 @@ int main()
     namespace1::test();
 
     personnes::Personne personne;
-    personne.marcher();
+    personne.marcher(); */
 
+    /********* Lesson 9 ********/
+    /* ofstream nomFluxEcriture{"fichiers/graytchad.txt"};
+    int nb = 5;
+    nomFluxEcriture << "Lalekou Gray Tchad" << endl;
+    nomFluxEcriture << "Lalekou Gray Tchad" << endl;
+    nomFluxEcriture << "Lalekou Gray Tchad" << endl;
+    nomFluxEcriture << "Lalekou Gray Tchad" << endl;
+    nomFluxEcriture << nb << endl;
+    nomFluxEcriture << "Lalekou Gray Tchad" << endl;
+    nomFluxEcriture << "Lalekou Gray Tchad" << endl;
+    nomFluxEcriture.close();
+
+    ifstream nomFluxLecture{"fichiers/graytchad.txt"};
+    string mot1, mot2;
+    getline(nomFluxLecture, mot2);
+    cout << mot2 << endl;
+    getline(nomFluxLecture, mot2);
+    nomFluxLecture >> mot1;
+    cout << mot2 << endl
+         << mot1 << endl; */
+
+    /********* Lesson 10 ********/
+
+    /* string nomChaine{"Lalekou gray Tchad"};
+
+    cout << nomChaine.size() << nomChaine << endl;
+    nomChaine.erase();
+    cout << nomChaine.size() << nomChaine << endl;
+
+    const string chaine2 = nomChaine.substr(4, 8);
+    cout << chaine2 << endl
+         << chaine2.empty() << endl;
+    nomChaine.append(" fi formation C++ maaya le Doutoum");
+    cout << nomChaine; */
+
+    /********* Lesson 11 ********/
     return EXIT_SUCCESS;
 }
