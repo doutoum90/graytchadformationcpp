@@ -3,6 +3,8 @@
 #include <memory>
 #include <fstream>
 #include <string>
+#include <list>
+#include <vector>
 #include "fonctions.hpp"
 #include "personne.hpp"
 
@@ -228,5 +230,34 @@ int main()
     cout << nomChaine; */
 
     /********* Lesson 11 ********/
+
+    /* list<personnes::Personne> maListe;
+    personnes::Personne p1, p2, p3, p4;
+    maListe.push_back(p1);
+    maListe.push_front(p1);
+    for (auto i = maListe.begin(); i != maListe.end(); i++)
+        (*i).marcher(); */
+
+    /* list<int> malisteEntier;
+    malisteEntier.push_front(1);
+    malisteEntier.push_front(2);
+    malisteEntier.push_front(3);
+    malisteEntier.push_front(4);
+
+    malisteEntier.push_back(0);
+    malisteEntier.push_back(-1);
+    for (auto i = malisteEntier.begin(); i != malisteEntier.end(); i++)
+        cout << *i << endl; */
+
+    vector<int> monVecteurEntier;
+    monVecteurEntier.push_back(1);
+    monVecteurEntier.push_back(2);
+    monVecteurEntier.push_back(3);
+    monVecteurEntier.push_back(4);
+
+    monVecteurEntier.push_back(0);
+    monVecteurEntier.push_back(-1);
+    for (auto i = monVecteurEntier.begin(); i != monVecteurEntier.end(); i++)
+        cout << *i << endl;
     return EXIT_SUCCESS;
 }

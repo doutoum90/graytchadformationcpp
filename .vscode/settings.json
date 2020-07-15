@@ -63,6 +63,7 @@
         "__cxx_version": "cpp",
         "filesystem": "cpp",
         "fstream": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "list": "cpp"
     }
 }
