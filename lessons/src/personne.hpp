@@ -3,18 +3,21 @@
 #include <iostream>
 #include <string>
 
-class Personne
+namespace personnes
 {
-public:
-    /** les attributs***/
-    int age;
-    std::string nom;
-    // char * nom;
-    /** les methodes***/
-    Personne();
-    Personne(int age, std::string nom);
-    ~Personne();
-    void marcher();
-};
+    class Personne
+    {
+    public:
+        /** les attributs***/
+        int age;
+        std::string nom;
+        // char * nom;
+        /** les methodes***/
+        Personne();
+        Personne(int age, std::string nom);
+        ~Personne();
+        void marcher();
+    };
+} // namespace personnes
 
 #endif
