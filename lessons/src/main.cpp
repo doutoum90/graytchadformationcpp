@@ -7,8 +7,28 @@
 #include <vector>
 #include "fonctions.hpp"
 #include "personne.hpp"
+#include "complexe.hpp"
 
 using namespace std;
+
+/* int somme(int a, int b) { return a + b; }
+float somme(float a, float b) { return a + b; }
+double somme(double a, double b) { return a + b; } */
+// auto somme =[](auto a, auto b) { return a + b; };
+template <class T>
+T somme(T a, T b) { return a + b; }
+
+template <class T>
+class Pile
+{
+public:
+    T element;
+};
+ostream &operator<<(ostream &os, NombreComplexe complex)
+{
+    os << complex.getReel() << " + i*" << complex.getImaginaire() << endl;
+    return os;
+}
 
 namespace namespace1
 {
@@ -236,9 +256,8 @@ int main()
     maListe.push_back(p1);
     maListe.push_front(p1);
     for (auto i = maListe.begin(); i != maListe.end(); i++)
-        (*i).marcher(); */
-
-    /* list<int> malisteEntier;
+        (*i).marcher(); 
+    list<int> malisteEntier;
     malisteEntier.push_front(1);
     malisteEntier.push_front(2);
     malisteEntier.push_front(3);
@@ -247,7 +266,7 @@ int main()
     malisteEntier.push_back(0);
     malisteEntier.push_back(-1);
     for (auto i = malisteEntier.begin(); i != malisteEntier.end(); i++)
-        cout << *i << endl; */
+        cout << *i << endl; 
 
     vector<int> monVecteurEntier;
     monVecteurEntier.push_back(1);
@@ -259,5 +278,25 @@ int main()
     monVecteurEntier.push_back(-1);
     for (auto i = monVecteurEntier.begin(); i != monVecteurEntier.end(); i++)
         cout << *i << endl;
+        */
+
+    /********* Lesson 12 ********/
+    int a = 5, b = 8;
+
+    NombreComplexe c1{0, 1}, c2{1, 0};
+
+    cout << c1 + c2 << endl;
+    cout << c1 << c2 << endl;
+
+    cout << somme(a, b) << endl;
+
+    Pile<int> pileEntier;
+    pileEntier.element = 5;
+    cout << pileEntier.element << endl;
+
+    Pile<NombreComplexe> pileComplexe;
+    pileComplexe.element = {4, 3};
+
+    cout << pileComplexe.element;
     return EXIT_SUCCESS;
 }
